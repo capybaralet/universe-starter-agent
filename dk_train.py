@@ -94,7 +94,8 @@ def create_commands(session, num_workers, remotes, env_id, logdir, shell='bash',
 
 def run():
     args = parser.parse_args()
-    cmds, notes = create_commands("dk_a3c", args.num_workers, args.remotes, args.env_id, args.log_dir, mode=args.mode, hparams=hparams.get_hparams(args))
+    #cmds, notes = create_commands("dk_a3c", args.num_workers, args.remotes, args.env_id, args.log_dir, mode=args.mode, hparams=hparams.get_hparams(args))
+    cmds, notes = create_commands("dk_a3c", args.num_workers, args.remotes, args.env_id, args.log_dir, mode=args.mode)#, hparams=hparams.get_hparams(args))
     if args.dry_run:
         print("Dry-run mode due to -n flag, otherwise the following commands would be executed:")
     else:
